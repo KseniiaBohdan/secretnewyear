@@ -1,0 +1,13 @@
+com\secretdedmoroz\dao\UserDao.class
+com\secretdedmoroz\service\UserService.class
+com\secretdedmoroz\service\RoomService.class
+com\secretdedmoroz\controller\InRoomController.class
+com\secretdedmoroz\model\User.class
+com\secretdedmoroz\controller\cookie\CookieName.class
+com\secretdedmoroz\controller\LoginController.class
+com\secretdedmoroz\dao\RoomDao.class
+com\secretdedmoroz\app\Application.class
+com\secretdedmoroz\model\Room.class
+com\secretdedmoroz\controller\data\Session.class
+com\secretdedmoroz\controller\CreateRoomController.class
+com\secretdedmoroz\controller\cookie\CookieService.class
