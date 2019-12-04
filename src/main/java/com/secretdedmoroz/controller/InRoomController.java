@@ -1,6 +1,6 @@
 package com.secretdedmoroz.controller;
 
-import static com.secretdedmoroz.controller.cookie.CookieName.CURRENT_ROOM_URL;
+import static com.secretdedmoroz.controller.cookie.CookieName.CURRENT_PARTY_URL;
 import static java.util.Objects.nonNull;
 
 import javax.annotation.Resource;
@@ -25,7 +25,7 @@ public class InRoomController {
 
     @GetMapping("/in-room")
     public ModelAndView inRoom(HttpServletRequest request, HttpServletResponse response) {
-        Room room = roomService.getRoomByUrl(cookieService.getCookieValue(request, CURRENT_ROOM_URL));
+        Room room = roomService.getRoomByUrl(cookieService.getCookieValue(request, CURRENT_PARTY_URL));
         if (nonNull(room)) {
             return new ModelAndView("/inRoom.html");
         } else {

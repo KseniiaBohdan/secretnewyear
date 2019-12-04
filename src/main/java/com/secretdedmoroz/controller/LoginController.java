@@ -8,6 +8,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
@@ -24,6 +25,11 @@ public class LoginController {
     private UserService userService;
     @Resource
     private PartyService partyService;
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
 
     @PostMapping("/createPartyAndAddPlayers")
     public RedirectView createPartyAndAddPlayers(@ModelAttribute("loginData") LoginData loginData, HttpServletResponse response) {

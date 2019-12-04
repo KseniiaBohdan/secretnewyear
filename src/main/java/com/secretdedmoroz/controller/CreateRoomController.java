@@ -1,6 +1,6 @@
 package com.secretdedmoroz.controller;
 
-import static com.secretdedmoroz.controller.cookie.CookieName.CURRENT_ROOM_URL;
+import static com.secretdedmoroz.controller.cookie.CookieName.CURRENT_PARTY_URL;
 import static com.secretdedmoroz.controller.cookie.CookieName.CURRENT_USER;
 import static java.util.Objects.nonNull;
 
@@ -46,7 +46,7 @@ public class CreateRoomController {
         String currentUserEmail = cookieService.getCookieValue(request, CURRENT_USER);
         if (nonNull(currentUserEmail)) {
             String roomUrl = roomService.createRoom(currentUserEmail, room.getRoomName());
-            response.addCookie(new Cookie(CURRENT_ROOM_URL, roomUrl));
+            response.addCookie(new Cookie(CURRENT_PARTY_URL, roomUrl));
             return new RedirectView("/in-room");
         } else {
             return new RedirectView("/error");
