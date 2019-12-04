@@ -30,7 +30,7 @@ a new environment.
 copyright ownership of the Font Software.
 
 "Substantially Changed" refers to Modified Versions which can be easily
-identified as dissimilar to the Font Software by users of the Font
+identified as dissimilar to the Font Software by players of the Font
 Software comparing the Original Version with the Modified Version.
 
 To "Propagate" a work means to do anything with it that, without

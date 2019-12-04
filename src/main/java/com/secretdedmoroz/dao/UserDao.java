@@ -24,7 +24,7 @@ public class UserDao {
         return users.stream().filter(u -> u.getEmail().equals(email)).findFirst().orElse(null);
     }
 
-    public boolean createUser(User user){
+    public boolean createUser(User user) {
         return users.add(user);
     }
 }
