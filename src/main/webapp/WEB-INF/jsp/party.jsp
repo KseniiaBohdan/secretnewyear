@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>In Room</title>
+    <title>Party</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -35,9 +35,12 @@
 				<span class="login100-form-title p-b-41">
 					The Room
 				</span>
-            <form class="login100-form validate-form p-b-33 p-t-5" method="post" action="/login" modelAttribute="user">
+            <form class="login100-form validate-form p-b-33 p-t-5" method="get" action="/domagic">
 
-
+                <c:forEach items="${players}" var="player">
+                   <c:out value="${player.name}"/>
+                   <c:out value="${player.email}"/>
+                </c:forEach>
 
                 <div class="container-login100-form-btn m-t-32">
                     <button class="login100-form-btn" type="submit">

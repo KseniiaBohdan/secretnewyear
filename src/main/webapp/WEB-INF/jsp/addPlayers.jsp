@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Add players</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -33,34 +33,19 @@
     <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
         <div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
-					Let's play
+					Add players
 				</span>
-            <form class="login100-form validate-form p-b-33 p-t-5" method="post" modelAttribute="loginData">
+            <form class="login100-form validate-form p-b-33 p-t-5" method="get">
 
                 <div class="wrap-input100 validate-input" data-validate="Enter username">
-                    <input class="input100" type="text" name="userName" placeholder="User name" required>
-                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Enter email">
-                    <input class="input100" type="email" name="email" placeholder="Email" required>
-                    <span class="focus-input100" data-placeholder="&#xe80f;"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Enter username">
-                    <input class="input100" type="text" name="partyName" placeholder="Party name" required>
+                    <input class="input100" type="text" name="players"
+                           placeholder="Players in format name1=email1;name2=email2" required>
                     <span class="focus-input100" data-placeholder="&#xe82a;"></span>
                 </div>
 
                 <div class="container-login100-form-btn m-t-32">
-                    <button class="login100-form-btn" type="submit" formaction="/createPartyAndAddPlayers">
-                        Add players
-                    </button>
-                </div>
-
-                <div class="container-login100-form-btn m-t-32">
-                    <button class="login100-form-btn" type="submit" formaction="/inRoom">
-                        In party
+                    <button class="login100-form-btn" type="submit" formaction="/addPlayers">
+                        Add
                     </button>
                 </div>
 

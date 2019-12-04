@@ -26,11 +26,11 @@ public class DoMagicController {
     @Resource
     private EmailService emailService;
 
-    @GetMapping("/domagic")
-    public ModelAndView doMagic(HttpServletRequest request) {
+    @GetMapping("/doMagic")
+    public String doMagic(HttpServletRequest request) {
         Map<User, User> pares = magicService.doMagic(cookieService.getCookieValue(request, CURRENT_PARTY_URL));
         emailService.sendEmails(pares);
-        return new ModelAndView("/theEnd.html");
+        return "theEnd";
     }
 
 }
